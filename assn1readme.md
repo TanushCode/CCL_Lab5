@@ -55,7 +55,8 @@ The implementation demonstrates:
                      +----------------------+
 
 ```
-#3. AWS Services and Technologies
+# 3. AWS Services and Technologies
+---
 -Service / Technology	Purpose
 -Amazon EC2	Hosts the Wagtail/Django application
 -Amazon RDS	Hosts the PostgreSQL database
@@ -64,16 +65,16 @@ The implementation demonstrates:
 -Django	Web application framework
 -Wagtail	CMS/application framework
 systemd	Manages the Wagtail application service
-
-#5. EC2 Application
-
+---
+# 5. EC2 Application
+---
 The existing Lab 4 application is the Wagtail Bakery Demo.
 
-##Application directory:
+## Application directory:
 
 /opt/wagtail-bakerydemo/app/bakerydemo
 
-##Python virtual environment:
+## Python virtual environment:
 
 /opt/wagtail-bakerydemo/app/bakerydemo/.venv
 
@@ -84,13 +85,14 @@ wagtail.service
 The Django application runs on:
 
 0.0.0.0:8000
-#5. RDS PostgreSQL Deployment
-
+---
+# 6. RDS PostgreSQL Deployment
+---
 An Amazon RDS PostgreSQL database was deployed for the Wagtail application.
 
 The RDS database provides the persistent PostgreSQL backend for the Django/Wagtail application.
 
-##The following operations were performed:
+## The following operations were performed:
 
 -Created the RDS PostgreSQL database.
 -Configured the required network/security access.
@@ -100,14 +102,14 @@ The RDS database provides the persistent PostgreSQL backend for the Django/Wagta
 -Applied Django migrations.
 -Verified Wagtail/Django tables in PostgreSQL.
 -Performed CRUD verification.
-
-#6. Network and Security Configuration
-
+---
+# 7. Network and Security Configuration
+---
 The RDS database requires PostgreSQL network connectivity from the EC2-hosted application.
 
 The inbound security configuration for the Lab 4 environment was modified to permit the required database connection.
 
-##The intended architecture is:
+## The intended architecture is:
 ```
 EC2
  |
@@ -119,12 +121,12 @@ RDS PostgreSQL
 The database should only be accessible through the required application/network path and should not be unnecessarily exposed to the public internet.
 
 Evidence of the modified inbound rule is included in the submitted evidence document.
-
-#7. Database Authentication
-
+---
+# 8. Database Authentication
+---
 Database connectivity was tested from the EC2 instance.
 
-##The following were successfully verified:
+## The following were successfully verified:
 
 -Connection to the RDS database
 -Database-user authentication
@@ -132,9 +134,9 @@ Database connectivity was tested from the EC2 instance.
 -Django application database connectivity
 
 This confirmed that the EC2 application environment could communicate with the RDS PostgreSQL database.
-
-#8. Django Database Integration
-
+---
+# 9. Django Database Integration
+---
 The Wagtail/Django application was configured to use the Amazon RDS PostgreSQL database.
 
 The application was then tested using Django's database functionality.
@@ -142,12 +144,12 @@ The application was then tested using Django's database functionality.
 Django migrations were executed against the RDS database.
 
 Successful migrations confirmed that Django could communicate with PostgreSQL and create the required application schema.
-
-#9. Django and Wagtail Database Schema
-
+---
+# 10. Django and Wagtail Database Schema
+---
 The database schema was created using Django migrations.
 
-##The resulting PostgreSQL database contains tables required by Django and Wagtail, including components for:
+## The resulting PostgreSQL database contains tables required by Django and Wagtail, including components for:
 
 -Authentication
 -Administration
@@ -162,7 +164,7 @@ The database schema was created using Django migrations.
 
 The Wagtail/Django tables were inspected in PostgreSQL as part of the database verification.
 
-#10. Systemd Service Configuration
+#  10. Systemd Service Configuration
 
 The Wagtail application is managed using systemd.
 
@@ -180,13 +182,13 @@ sudo systemctl show wagtail.service --property=Environment
 
 The Wagtail service was successfully running on the EC2 instance after the RDS integration.
 
-#11. Django Migration
+# 11. Django Migration
 
 After configuring the RDS database, Django migrations were executed.
 
 The migrations successfully created the required database tables in PostgreSQL.
 
-##This verified the complete application-to-database path:
+## This verified the complete application-to-database path:
 ```
 Wagtail / Django
        |
@@ -196,7 +198,7 @@ Amazon RDS PostgreSQL
        v
 Django / Wagtail Tables
 ```
-#12. CRUD Verification
+# 12. CRUD Verification
 
 The application/database implementation was tested for all four required CRUD operations.
 
@@ -222,9 +224,9 @@ Create → Read → Update → Delete
 
 CRUD verification evidence is included separately with the submission.
 
-#13. Evidence Submitted
+# 13. Evidence Submitted
 
-##The separate evidence document contains screenshots showing:
+## The separate evidence document contains screenshots showing:
 
 -Database
 -Created RDS database
@@ -247,7 +249,7 @@ CRUD verification evidence is included separately with the submission.
 -CRUD
 -Amazon RDS PostgreSQL CRUD operation verification
 
-#14. Verification Summary
+# 14. Verification Summary
 | Requirement                   | Status    |
 | ----------------------------- | --------- |
 | RDS PostgreSQL deployed       | Completed |
@@ -265,7 +267,7 @@ CRUD verification evidence is included separately with the submission.
 | Wagtail systemd service       | Completed |
 
 
-#15. Result
+# 15. Result
 
 The Lab 4 Wagtail Bakery Demo application was successfully connected to an Amazon RDS PostgreSQL database.
 
