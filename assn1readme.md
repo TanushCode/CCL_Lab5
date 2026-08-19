@@ -56,7 +56,7 @@ The implementation demonstrates:
 
 ```
 
-# . Verification Summary
+# Verification Summary
 | Requirement                   | Status    |
 | ----------------------------- | --------- |
 | RDS PostgreSQL deployed       | Completed |
@@ -74,7 +74,7 @@ The implementation demonstrates:
 | Wagtail systemd service       | Completed |
 
 
-# . Result
+# Result
 
 The Lab 4 Wagtail Bakery Demo application was successfully connected to an Amazon RDS PostgreSQL database.
 
