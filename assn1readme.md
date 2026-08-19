@@ -30,7 +30,7 @@ The implementation demonstrates:
 
 ---
 
-# 2. System Architecture
+## 2. System Architecture
 
 ```text
                          Internet / Client
@@ -56,7 +56,7 @@ The implementation demonstrates:
 
 ```
 
-# Verification Summary
+## Verification Summary
 | Requirement                   | Status    |
 | ----------------------------- | --------- |
 | RDS PostgreSQL deployed       | Completed |
