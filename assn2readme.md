@@ -66,7 +66,7 @@ The implementation demonstrates:
 ```
 **The `CREATE` operation** in this Django/Wagtail application handles adding new bakery products to the DynamoDB table. It maps an incoming HTTP `POST` request payload to a DynamoDB item using the `boto3` SDK.
 
-### Implementation Details
+## 3. Implementation Details
 
 #### API Endpoint
 * **Method**: `POST`
