@@ -54,6 +54,7 @@ The implementation demonstrates:
                      | Wagtail/Django DB    |
                      +----------------------+
 
+```
 3. AWS Services and Technologies
 Service / Technology	Purpose
 Amazon EC2	Hosts the Wagtail/Django application
@@ -63,7 +64,8 @@ PostgreSQL	Relational database
 Django	Web application framework
 Wagtail	CMS/application framework
 systemd	Manages the Wagtail application service
-4. EC2 Application
+
+5. EC2 Application
 
 The existing Lab 4 application is the Wagtail Bakery Demo.
 
@@ -184,7 +186,7 @@ After configuring the RDS database, Django migrations were executed.
 The migrations successfully created the required database tables in PostgreSQL.
 
 This verified the complete application-to-database path:
-
+```
 Wagtail / Django
        |
        v
@@ -192,6 +194,7 @@ Amazon RDS PostgreSQL
        |
        v
 Django / Wagtail Tables
+```
 12. CRUD Verification
 
 The application/database implementation was tested for all four required CRUD operations.
@@ -242,21 +245,25 @@ Database Schema
 Wagtail Django tables in PostgreSQL
 CRUD
 Amazon RDS PostgreSQL CRUD operation verification
+
 14. Verification Summary
-Requirement	Status
-RDS PostgreSQL deployed	Completed
-EC2 application running	Completed
-EC2-to-RDS connectivity	Completed
-Database authentication	Completed
-Django RDS configuration	Completed
-Django migrations	Completed
-Wagtail/Django tables created	Completed
-Create operation	Completed
-Read operation	Completed
-Update operation	Completed
-Delete operation	Completed
-Security configuration	Completed
-Wagtail systemd service	Completed
+| Requirement                   | Status    |
+| ----------------------------- | --------- |
+| RDS PostgreSQL deployed       | Completed |
+| EC2 application running       | Completed |
+| EC2-to-RDS connectivity       | Completed |
+| Database authentication       | Completed |
+| Django RDS configuration      | Completed |
+| Django migrations             | Completed |
+| Wagtail/Django tables created | Completed |
+| Create operation              | Completed |
+| Read operation                | Completed |
+| Update operation              | Completed |
+| Delete operation              | Completed |
+| Security configuration        | Completed |
+| Wagtail systemd service       | Completed |
+
+
 15. Result
 
 The Lab 4 Wagtail Bakery Demo application was successfully connected to an Amazon RDS PostgreSQL database.
