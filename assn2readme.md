@@ -125,7 +125,7 @@ def create_product(request):
     return JsonResponse({'error': 'Method not allowed'}, status=405)
 ```
 
-### Request and Response Lifecycle
+##  4.Request and Response Lifecycle
 
 1. **Client Request**: The client sends a `POST` request to `/api/products/` with the product JSON structure in the body.
 2. **Authentication**: The EC2 instance automatically fetches temporary security credentials via its attached IAM role.
